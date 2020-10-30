@@ -1,0 +1,42 @@
+*{
+	color: white;
+	background-color:black;
+	margin:0px;
+	padding:0px;
+}
+
+h1{
+	font-weight = bold;
+	color: white;
+}
+
+a{
+	color: black;
+}
+a:hover{
+	color: #006B38FF;
+}
+
+#menuBar > ul{
+	background-color:grey;
+    	width:100%; 
+	padding: 15px 10px;
+}
+#menuBar > ul > li{
+	display:inline;
+	padding:inherit;
+	background-color:inherit;
+	color:black;
+
+}
+#menuBar > ul > li>a:hover{
+	background-color:black;
+}
+#menuBar > ul > li > a{
+	background-color:inherit;
+	padding:inherit;
+	font-weight:bold;
+	font-size: 24px;
+	text-decoration:none;
+	text-align:center;
+}
