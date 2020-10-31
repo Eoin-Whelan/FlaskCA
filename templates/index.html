@@ -1,1 +1,16 @@
 {%	extends "base.html"	%}
+
+{%	block main_content	%}
+<div id="homePage">
+  <h1> Welcome {{ userName }}!</h1>
+  <br>
+  <p>{{  open_message }}</p>
+
+  <form id="guestBook" action="/processForm" method="POST">
+    <input type="text" name="userName" placeholder="Your First Name Here!" required>
+    <input type="email" name="userEmail" placeholder="Your Email Address!" required>
+    <textarea name="userMsg" placeholder="Say hi if you'd like"></textarea>
+    <input type="submit" action="submit" name="" value="Submit">
+  </form>
+</div>
+{%	endblock	%}
