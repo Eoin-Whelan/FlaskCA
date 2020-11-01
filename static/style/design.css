@@ -8,6 +8,10 @@
 h1{
 	font-weight = bold;
 	color: white;
+	width:50%;
+	margin:auto;
+	margin-top: 20px;
+	text-align: center;
 }
 
 a{
@@ -17,9 +21,16 @@ a:hover{
 	color: #006B38FF;
 }
 
+iframe{
+	margin:50px;
+}
+
+p > a{
+	color: white;
+}
+
 #menuBar > ul{
 	background-color:grey;
-    width:100%;
 	padding: 15px 10px;
 }
 #menuBar > ul > li{
@@ -41,7 +52,7 @@ a:hover{
 	text-align:center;
 }
 
-#homePage{
+#mainContent{
 	width:50%;
 	margin:auto;
 	margin-top: 50px;

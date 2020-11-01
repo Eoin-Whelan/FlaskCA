@@ -1,22 +1,39 @@
+<!--
+	Title: 		base.html
+	Author:		Eoin Farrell
+	DOC:			31/10/2020
+	Purpose:	base.html acts as the template for flask to replicate onto other
+	webpages for this site.
+	Includes:
+		- Navigation bar.
+-->
+
 <!DOCTYPE HTML>
 <html>
 
 	<head>
 		<meta charset = "UTF-8">
+  <meta name="description" content="Free Web tutorials">
+	  <meta name="author" content="Eoin Farrell">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel = "stylesheet" type="text/css" href="static/style/design.css"/>
 	<title>
 		{{ main_title }}
 	</title>
 	</head>
+	<!-- Navigation bar at top of each page. -->
 	<div id = "menuBar">
 		<ul>
 			<li><a href="/">Home</a></li>
 			<li><a href="/personalPage">About Me!</a></li>
-			<li><a href="homePage.html">CV</a></li>
-			<li><a href="homePage.html">Tech Interests</a></li>
+			<li><a href="/CV">CV</a></li>
+			<li><a href="/techInterests">Tech Interests</a></li>
 			<li><a href="homePage.html">Personal Interests</a></li>
 		</ul>
 	</div>
+	<h1>
+		{{	pageHeaderMsg	}}
+	</h1>
 	<body>
 		{%	block main_content	%}
 		{%	endblock	%}
