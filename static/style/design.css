@@ -29,6 +29,11 @@ p > a{
 	color: white;
 }
 
+table{
+	border: 1px solid white;
+	width:100%;
+}
+
 #menuBar > ul{
 	background-color:grey;
 	padding: 15px 10px;
@@ -77,4 +82,50 @@ p > a{
 	margin: inherit;
 	height:50px;
 	width: auto;
+}
+
+#cvTable{
+	text-align: left;
+}
+#cvTable > tbody > tr > td{
+	border-top: 1px solid white;
+}
+
+#cvTable > tbody > tr > td > ul{
+	list-style-position: inside;
+	margin: 20px;
+	font-size: 12px;
+}
+
+#cvTable > tbody > tr > td > ul> li{
+	margin-bottom: 15px;
+}
+
+#cvTable > tbody > tr > td > h2{
+	margin-left: 15px;
+}
+.nestedTable{
+	margin-left: 50px;
+	margin-top: 20px;
+	border: none;
+}
+.nestedTable > tbody > tr > th{
+	margin-top: 10px;
+}
+
+.nestedTable > tbody > tr > td > ul{
+	margin: 10px;
+}
+
+.nestedTable > tbody > tr > td > ul > li{
+	margin-top: 10px;
+	margin-left: 20px;
+	font-size: 12px;
+
+}
+.nestedTable > tbody > tr > td > ul > li > a{
+	color:white;
+}
+.nestedTable > tbody > tr > td > ul > li > a:hover{
+	color:white;
 }

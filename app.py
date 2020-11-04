@@ -66,7 +66,9 @@ def personalPage():
 
 @app.route("/CV")
 def cv():
-    return render_template("resume.html", main_title="Professional Details")
+    return render_template(
+    "CV.html", 
+    main_title="Professional Details")
 
 
 @app.route("/techInterests")
