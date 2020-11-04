@@ -1,0 +1,46 @@
+{#
+  Title:    index.html
+  Author:   Eoin Farrell
+  DOC:      31/10/2020
+  Purpose:  index.html acts as the primary homepage for the site.
+  Includes:
+    - Guestbook form for user to sign.
+#}
+
+{%	extends "base.html"	%}
+
+{%	block main_content	%}
+<div id="mainContent">
+  <br>
+  <p>Have a look at a few of my passions in technology!</p>
+  <div id="techList"
+  <table>
+    <tr>
+      <td>
+        <a href="/assistiveTech">
+          <h1>
+            Assistive Tech
+          </h1>
+          <img SRC = "static/resources/img/brailleKeyboard.jpg" height = "400" width = "600"></img>
+        </a>
+      </td>
+      <td>
+        <a href="/hardware">
+          <h1>
+            Hardware
+          </h1>
+          <img SRC = "static/resources/img/arduino2.jpg" height = "400" width = "600"></img>
+        </a>
+      </td>
+      <td>
+        <a href="/assistiveTech">
+          <h1>
+            **THIRD INTEREST HERE**
+          </h1>
+          <img SRC = "static/resources/img/brailleKeyboard.jpg" height = "400" width = "600"></img>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+{%	endblock	%}

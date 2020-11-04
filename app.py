@@ -67,14 +67,14 @@ def personalPage():
 @app.route("/CV")
 def cv():
     return render_template(
-    "CV.html", 
+    "CV.html",
     main_title="Professional Details")
 
 
-@app.route("/techInterests")
+@app.route("/techHub")
 def techInterests():
     return render_template(
-        "techinterests.html", main_title="What Draws Me To Soft. Engineering"
+        "techHub.html", main_title="What Draws Me To Soft. Engineering"
     )
 
 
