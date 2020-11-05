@@ -78,6 +78,13 @@ def techInterests():
     )
 
 
+@app.route("/assistiveTech")
+def assistiveTech():
+    return render_template(
+        "assistiveTech.html", main_title="Assistive Tech"
+    )
+
+
 @app.route("/personalInterests")
 def personalInterests():
     return render_template("personalInterests.html", main_title="Personal Interests!")
