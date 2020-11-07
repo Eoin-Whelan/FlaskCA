@@ -28,7 +28,7 @@ def display_homepage():
     )
 
 
-def display_homepage(guest_Signed):
+def display_homepage(guest_Signed="Stranger"):
     return render_template(
         "index.html",
         main_title="The Eoin Zone",
@@ -40,18 +40,21 @@ def display_homepage(guest_Signed):
 
 """
     /processForm appends the comments.txt file and returns the user to the
-    homepage with a personalized greeting.
+    homepage with a personalized greeting. If they choose not to enter their name,
+    a default name "Stranger" is assigned to them in their greeting.
 """
+
+
 @app.route("/processForm", methods=["POST"])
 def process_form_data():
     data = request.form
 
     with open("comments.txt", "a") as df:
-        print(data["userName"], ",", sep="", end="", file=df)
         print(data["userEmail"], ",", sep="", end="", file=df)
         print(data["userMsg"], ",", sep="", end="", file=df)
         df.write("\n")
-
+    if data["userName"] == "":
+        return display_homepage()
     return display_homepage(data["userName"])
 
 
@@ -66,9 +69,7 @@ def personalPage():
 
 @app.route("/CV")
 def cv():
-    return render_template(
-    "CV.html",
-    main_title="Professional Details")
+    return render_template("CV.html", main_title="Professional Details")
 
 
 @app.route("/techHub")
@@ -80,15 +81,17 @@ def techInterests():
 
 @app.route("/assistiveTech")
 def assistiveTech():
-    return render_template(
-        "assistiveTech.html", main_title="Assistive Tech"
-    )
+    return render_template("assistiveTech.html", main_title="Assistive Tech!")
+
 
 @app.route("/arduino")
 def arduino():
-    return render_template(
-        "arduino.html", main_title="The Power of Uno!"
-    )
+    return render_template("arduino.html", main_title="The Power of Uno!")
+
+
+@app.route("/VR")
+def VR():
+    return render_template("virtualReality.html", main_title="VR!")
 
 
 @app.route("/personalInterests")
