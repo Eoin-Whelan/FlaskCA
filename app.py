@@ -84,6 +84,12 @@ def assistiveTech():
         "assistiveTech.html", main_title="Assistive Tech"
     )
 
+@app.route("/arduino")
+def arduino():
+    return render_template(
+        "arduino.html", main_title="The Power of Uno!"
+    )
+
 
 @app.route("/personalInterests")
 def personalInterests():

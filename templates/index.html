@@ -10,7 +10,6 @@
 {%	extends "base.html"	%}
 
 {%	block main_content	%}
-<div id="mainContent">
   <h2> Welcome {{ userName }}!</h2>
   <br>
   <p>{{  open_message }}</p>
@@ -21,5 +20,4 @@
     <textarea name="userMsg" placeholder="Say hi if you'd like"></textarea>
     <input type="submit" action="submit" name="" value="Submit">
   </form>
-</div>
 {%	endblock	%}
