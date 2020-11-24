@@ -1,0 +1,11 @@
+//  Create table
+create database guestBook;
+
+//  Create admin and password access user.
+grant all on guestBook.* to 'admin' identified by 'deckard2019';
+
+//  Access table (Going from sudo myql)
+use guestBook;
+
+//  Self-explanatory. guestEmail and guestComments are saved and id makes each record unique.
+create table signatures( id int not null auto_increment primary key, guestEmail varchar(255), guestComment varchar(255));

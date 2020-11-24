@@ -6,7 +6,7 @@ DOC:		30/10/2020
 """
 
 from flask import Flask, render_template, request
-
+from data_utils import save_data
 
 app = Flask(__name__)
 
@@ -48,11 +48,7 @@ def display_homepage(guest_Signed="Stranger"):
 @app.route("/processForm", methods=["POST"])
 def process_form_data():
     data = request.form
-
-    with open("comments.txt", "a") as df:
-        print(data["userEmail"], ",", sep="", end="", file=df)
-        print(data["userMsg"], ",", sep="", end="", file=df)
-        df.write("\n")
+    save_data(data)
     if data["userName"] == "":
         return display_homepage()
     return display_homepage(data["userName"])
