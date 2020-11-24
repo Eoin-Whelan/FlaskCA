@@ -1,10 +1,12 @@
 {#
-  Title:    index.html
-  Author:   Eoin Farrell
-  DOC:      31/10/2020
-  Purpose:  index.html acts as the primary homepage for the site.
+  Title:      index.html
+  Author:     Eoin Farrell
+  DOC:        31/10/2020
+  Update CA2: 24/11/2020
+  Purpose:    index.html acts as the primary homepage for the site.
   Includes:
     - Guestbook form for user to sign.
+    - (CA2) Displays previous visitor signatures.
 #}
 
 {%	extends "base.html"	%}
@@ -29,15 +31,16 @@
       <th>
         Comment
       </th>
+      {#  Conditional checks if the SQL result set is not empty. If it is, a message stating so is returned #}
       {%  if data|length != 0 %}
         {%  for row in data  %}
         <tr>
           {% for entry in row %}
             <td>
               {%  if entry == "" %}
-              (No commment)
+                (No commment)
               {% else %}
-              {{entry}}
+                {{entry}}
               {%  endif %}
             </td>
           {% endfor %}

@@ -1,9 +1,9 @@
 """
 Title:		data_utils.py
-Author:	Eoin Farrell
+Author:	    Eoin Farrell
 Student No:	C00164354
 DOC:		24/11/2020
-Purpose:    Handler for data to be passed from flask sites to SQL database..
+Purpose:    Handles data passing to/from Flask App to SQL database.
 """
 
 
@@ -21,7 +21,8 @@ connection = {
 def save_data(data):
     """
     save_data opens a connection to database and performs
-    an insert using the information passed in through data.
+     insert using the information passed in through data. Returns True for test
+     purposes.
     """
     with DBcm.UseDatabase(connection) as cursor:
         SQL = """ insert into signatures (guestEmail, guestComment)

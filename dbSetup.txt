@@ -1,3 +1,11 @@
+/*
+  Title:      dbSetup.txt
+  Author:     Eoin Farrell
+  Student No: C00164354
+  DOC:        24/11/2020
+  Purpose:    SQL commands to create database, admin access and table with fields for personal website guestbook.
+*/
+
 //  Create table
 create database guestBook;
 
