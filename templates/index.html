@@ -17,7 +17,39 @@
   <form id="guestBook" action="/processForm" method="POST">
     <input type="text" name="userName" placeholder="What's your name? (Optional!)">
     <input type="email" name="userEmail" placeholder="Your Email Address!" required>
-    <textarea name="userMsg" placeholder="Say hi if you'd like!"></textarea>
+    <textarea name="userMsg" placeholder="Say hi if you'd like! (Max 250 characters)" maxlength="255"></textarea>
     <input type="submit" action="submit" name="" value="Submit">
   </form>
+  <center>
+    <h3> Check out what others had to say about this <b>great</b> website!</h3>
+    <table id="pastVisitors">
+      <th>
+        Visitor
+      </th>
+      <th>
+        Comment
+      </th>
+      {%  if data|length != 0 %}
+        {%  for row in data  %}
+        <tr>
+          {% for entry in row %}
+            <td>
+              {%  if entry == "" %}
+              (No commment)
+              {% else %}
+              {{entry}}
+              {%  endif %}
+            </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      {% else %}
+        <tr>
+          <td>
+            Doesn't seem to be anything here... yet!
+          </td>
+        </tr>
+      {% endif %}
+    </table>
+  </center>
 {%	endblock	%}

@@ -6,7 +6,7 @@ DOC:		30/10/2020
 """
 
 from flask import Flask, render_template, request
-from data_utils import save_data
+from data_utils import save_data, get_data
 
 app = Flask(__name__)
 
@@ -25,6 +25,7 @@ def display_homepage():
         pageHeaderMsg="",
         userName="Visitor",
         open_message="If you would be so kind as to sign the guestbook before continuing, I would be so grateful",
+        data= get_data()
     )
 
 
@@ -32,9 +33,9 @@ def display_homepage(guest_Signed="Stranger"):
     return render_template(
         "index.html",
         main_title="The Eoin Zone",
-        pageHeaderMsg="Cool, thanks!",
         userName=guest_Signed,
         open_message="Feel free to check out this website through the menu above!",
+        data= get_data()
     )
 
 
