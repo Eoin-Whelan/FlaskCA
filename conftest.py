@@ -3,10 +3,11 @@
     Author:         Eoin Farrell
     Student Number: C00164354
     Purpose:        conftest.py consists of fixture functions in assisting data and application test files.
-
+    DOC:            24/11/2020
 """
 
 import pytest
+import app as webapp
 import DBcm
 
 from data_utils import get_data
@@ -30,3 +31,9 @@ def clean_insertion():
     with DBcm.UseDatabase(testCredentials) as cursor:
         del_SQL = "DELETE FROM signatures WHERE guestEmail='testEntry'"
         cursor.execute(del_SQL)
+
+#       beginning of web application testing.
+@pytest.fixture
+def app():
+    app = webapp.app
+    return app
