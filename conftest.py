@@ -32,6 +32,7 @@ def clean_insertion():
         del_SQL = "DELETE FROM signatures WHERE guestEmail='testEntry'"
         cursor.execute(del_SQL)
 
+
 #       beginning of web application testing.
 @pytest.fixture
 def app():

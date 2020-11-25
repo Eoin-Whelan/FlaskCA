@@ -42,8 +42,8 @@ def test_insert_signature(clean_insertion):
     current_table_length = len(get_data())
     save_data(record)
     new_data_set = get_data()
-    test_data_cols();
-    test_database_data_format();
+    test_data_cols()
+    test_database_data_format()
     assert len(get_data()) == current_table_length + 1
     assert new_data_set[0][0] == record["userEmail"]
     assert new_data_set[0][1] == record["userMsg"]

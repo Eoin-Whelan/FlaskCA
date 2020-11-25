@@ -30,7 +30,6 @@ def save_data(data):
         cursor.execute(SQL, (data["userEmail"], data["userMsg"]))
 
 
-# 	Goes to DB, select * statement and returns the data retrieved.
 def get_data():
     """ Retrieves all guest email and comment entries, ordering it by descending order so latest entries are returned first. """
     SQL = "select guestEmail, guestComment from signatures ORDER BY id DESC"

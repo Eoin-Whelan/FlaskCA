@@ -4,7 +4,10 @@
   Student No: C00164354
   DOC:        24/11/2020
   Purpose:    SQL commands to create database, admin access and table with fields for personal website guestbook.
+              Login credentials are provided at the end for direct access.
 */
+
+(Going from sudo myql)
 
 //  Create table
 create database guestBook;
@@ -12,8 +15,15 @@ create database guestBook;
 //  Create admin and password access user.
 grant all on guestBook.* to 'admin' identified by 'deckard2019';
 
-//  Access table (Going from sudo myql)
+//  Access table
 use guestBook;
 
 //  Self-explanatory. guestEmail and guestComments are saved and id makes each record unique.
 create table signatures( id int not null auto_increment primary key, guestEmail varchar(255), guestComment varchar(255));
+
+//  To access database after creation.
+mysql -u admin -p guestBook
+
+Password:
+
+deckard2019

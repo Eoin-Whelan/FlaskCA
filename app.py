@@ -43,8 +43,8 @@ def display_homepage(guest_Signed="Stranger"):
 @app.route("/processForm", methods=["POST"])
 def process_form_data():
     """
-        processForm gathers form data, calls the save_data function from data_utils
-        and return the user to the homepage.
+        processForm gathers form data, calls the save_data function from data_utils,
+        saving the signature to the database and returns the user to the homepage.
     """
     data = request.form
     save_data(data)
@@ -65,9 +65,7 @@ def personalPage():
 
 @app.route("/CV")
 def cv():
-    return render_template("CV.html",
-        metaTitle="cv",
-        main_title="Professional Details")
+    return render_template("CV.html", metaTitle="cv", main_title="Professional Details")
 
 
 @app.route("/techHub")
@@ -75,37 +73,33 @@ def techInterests():
     return render_template(
         "techHub.html",
         metaTitle="techHub",
-        main_title="What Draws Me To Soft. Engineering"
+        main_title="What Draws Me To Soft. Engineering",
     )
 
 
 @app.route("/assistiveTech")
 def assistiveTech():
     return render_template(
-        "assistiveTech.html",
-        metaTitle="assistiveTech",
-        main_title="Assistive Tech!")
+        "assistiveTech.html", metaTitle="assistiveTech", main_title="Assistive Tech!"
+    )
 
 
 @app.route("/arduino")
 def arduino():
     return render_template(
-        "arduino.html",
-        metaTitle="arduino",
-        main_title="The Power of Uno!")
+        "arduino.html", metaTitle="arduino", main_title="The Power of Uno!"
+    )
 
 
 @app.route("/VR")
 def VR():
-    return render_template(
-        "virtualReality.html",
-        metaTitle="VR",
-        main_title="VR!")
+    return render_template("virtualReality.html", metaTitle="VR", main_title="VR!")
 
 
 @app.route("/personalInterests")
 def personalInterests():
     return render_template(
         "personalInterests.html",
-         metaTitle="personalInterests",
-         main_title="Personal Interests!")
+        metaTitle="personalInterests",
+        main_title="Personal Interests!",
+    )
