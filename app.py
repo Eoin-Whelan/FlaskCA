@@ -68,23 +68,18 @@ def cv():
 @app.route("/techHub")
 def techInterests():
     return render_template(
-        "techHub.html",
-        main_title="What Draws Me To Soft. Engineering",
+        "techHub.html", main_title="What Draws Me To Soft. Engineering"
     )
 
 
 @app.route("/assistiveTech")
 def assistiveTech():
-    return render_template(
-        "assistiveTech.html", main_title="Assistive Tech!"
-    )
+    return render_template("assistiveTech.html", main_title="Assistive Tech!")
 
 
 @app.route("/arduino")
 def arduino():
-    return render_template(
-        "arduino.html", main_title="The Power of Uno!"
-    )
+    return render_template("arduino.html", main_title="The Power of Uno!")
 
 
 @app.route("/VR")
@@ -94,7 +89,4 @@ def VR():
 
 @app.route("/personalInterests")
 def personalInterests():
-    return render_template(
-        "personalInterests.html",
-        main_title="Personal Interests!",
-    )
+    return render_template("personalInterests.html", main_title="Personal Interests!")
