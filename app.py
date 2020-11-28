@@ -16,7 +16,6 @@ app = Flask(__name__)
 def display_homepage():
     return render_template(
         "index.html",
-        metaTitle="homePage",
         main_title="The Eoin Zone",
         pageHeaderMsg="",
         userName="Visitor",
@@ -32,7 +31,6 @@ def display_homepage(guest_Signed="Stranger"):
     """
     return render_template(
         "index.html",
-        metaTitle="homePage",
         main_title="The Eoin Zone",
         userName=guest_Signed,
         open_message="Feel free to check out this website through the menu above!",
@@ -57,7 +55,6 @@ def process_form_data():
 def personalPage():
     return render_template(
         "personalPage.html",
-        metaTitle="aboutMe",
         main_title="About Me!",
         pageHeaderMsg="You want to know about me!?",
     )
@@ -65,14 +62,13 @@ def personalPage():
 
 @app.route("/CV")
 def cv():
-    return render_template("CV.html", metaTitle="cv", main_title="Professional Details")
+    return render_template("CV.html", main_title="Professional Details")
 
 
 @app.route("/techHub")
 def techInterests():
     return render_template(
         "techHub.html",
-        metaTitle="techHub",
         main_title="What Draws Me To Soft. Engineering",
     )
 
@@ -80,26 +76,25 @@ def techInterests():
 @app.route("/assistiveTech")
 def assistiveTech():
     return render_template(
-        "assistiveTech.html", metaTitle="assistiveTech", main_title="Assistive Tech!"
+        "assistiveTech.html", main_title="Assistive Tech!"
     )
 
 
 @app.route("/arduino")
 def arduino():
     return render_template(
-        "arduino.html", metaTitle="arduino", main_title="The Power of Uno!"
+        "arduino.html", main_title="The Power of Uno!"
     )
 
 
 @app.route("/VR")
 def VR():
-    return render_template("virtualReality.html", metaTitle="VR", main_title="VR!")
+    return render_template("virtualReality.html", main_title="VR!")
 
 
 @app.route("/personalInterests")
 def personalInterests():
     return render_template(
         "personalInterests.html",
-        metaTitle="personalInterests",
         main_title="Personal Interests!",
     )
