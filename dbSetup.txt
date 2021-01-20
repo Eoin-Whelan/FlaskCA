@@ -13,7 +13,7 @@
 create database guestBook;
 
 //  Create admin and password access user.
-grant all on guestBook.* to 'admin' identified by 'deckard2019';
+grant all on guestBook.* to 'admin' identified by 'password123';
 
 //  Access table
 use guestBook;
@@ -26,4 +26,4 @@ mysql -u admin -p guestBook
 
 Password:
 
-deckard2019
+password123
